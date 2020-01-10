@@ -1,6 +1,6 @@
 <?php
 
-namespace mole\php\cs;
+namespace jin2chen\php\cs;
 
 class PreCommitSniffer extends BaseCodeSniffer
 {

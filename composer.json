@@ -1,12 +1,12 @@
 {
-    "name": "mole-starlight/git-phpcs",
+    "name": "jin2chen/git-phpcs",
     "description": "Git hook for PHP code style.",
     "type": "library",
     "keywords": ["php", "code style", "phpcs"],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/mole-starlight/git-phpcs/issues",
-        "source": "https://github.com/mole-starlight/git-phpcs"
+        "issues": "https://github.com/jin2chen/git-phpcs/issues",
+        "source": "https://github.com/jin2chen/git-phpcs"
     },
     "authors": [
         {
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "mole\\php\\cs\\": "src"
+            "jin2chen\\php\\cs\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "mole\\php\\cs\\test\\": "test"
+            "jin2chen\\php\\cs\\test\\": "test"
         }
     },
     "extra": {

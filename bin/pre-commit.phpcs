@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use mole\php\cs\PreCommitSniffer;
+use jin2chen\php\cs\PreCommitSniffer;
 
 $composerAutoload = [
     __DIR__ . '/../../../vendor/autoload.php',
