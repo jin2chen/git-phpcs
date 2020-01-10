@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+use mole\php\cs\PrePushSniffer;
+
+$composerAutoload = [
+    __DIR__ . '/../../../vendor/autoload.php',
+    __DIR__ . '/../../vendor/autoload.php',
+    __DIR__ . '/../vendor/autoload.php',
+];
+$vendorPath = null;
+foreach ($composerAutoload as $autoload) {
+    if (file_exists($autoload)) {
+        /** @noinspection PhpIncludeInspection */
+        require $autoload;
+        $vendorPath = dirname($autoload);
+        break;
+    }
+}
+
+$command = new PrePushSniffer();
+exit($command->run());

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd )"
+HOOK=pre-commit
+if [ "$1" == "pre-push" ]; then
+    HOOK=pre-push
+fi
+
+mkdir -p .git/hooks/$HOOK.d
+cp -f $SCRIPT_DIR/hook .git/hooks/$HOOK
+cp -f $SCRIPT_DIR/$HOOK.phpcs .git/hooks/$HOOK.d
+chmod +x .git/hooks/$HOOK
+chmod +x .git/hooks/$HOOK.d/$HOOK.phpcs

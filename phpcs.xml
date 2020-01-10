@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="BD">
+    <description>BD Code Style</description>
+
+    <arg name="colors"/>
+    <arg name="report-width" value="160"/>
+    <arg name="extensions" value="php"/>
+    <arg value="p"/>
+
+    <file>./src</file>
+    <file>./tests</file>
+
+    <exclude-pattern>/bin</exclude-pattern>
+    <exclude-pattern>/.git</exclude-pattern>
+
+    <rule ref="PSR2" />
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>*/bootstrap.php</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Files.LineLength">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PSR2.Classes.PropertyDeclaration.Underscore">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+    <rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
+        <exclude-pattern>*/migrations/*</exclude-pattern>
+    </rule>
+</ruleset>
