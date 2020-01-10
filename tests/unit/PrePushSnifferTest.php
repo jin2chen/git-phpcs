@@ -1,8 +1,8 @@
 <?php
 
-namespace mole\php\cs\test\unit;
+namespace jin2chen\php\cs\test\unit;
 
-use mole\php\cs\PrePushSniffer;
+use jin2chen\php\cs\PrePushSniffer;
 use PHPUnit\Framework\TestCase;
 
 class PrePushSnifferTest extends TestCase
@@ -22,8 +22,8 @@ class PrePushSnifferTest extends TestCase
 
     public function test()
     {
-        $arg = 'refs/heads/master 3b2c02364d87e6377877a3f9e6829ce0c9d350a0 refs/heads/master d9546de866a1469beec61c021f0b495e05453666';
+        $arg = 'refs/heads/master fc4dc085b5c97b6a7e3d4523333f34d63b47d383 refs/heads/master 75ef27a5f778717f752b513d15f0377c5b7cad18';
         $cs = new PrePushSniffer();
-        $this->assertArraySubset(['tests/sample/Sample.php'], $cs->internalExtractFiles(...explode(' ', $arg)));
+        $this->assertTrue(in_array('tests/sample/Sample.php', $cs->internalExtractFiles(...explode(' ', $arg))));
     }
 }
